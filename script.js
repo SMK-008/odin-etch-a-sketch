@@ -55,9 +55,15 @@ const grids=document.querySelectorAll('.grids')
 grids.forEach((item)=>{
     item.addEventListener('mouseover',function(e){
         e.target.style.background="red"
-        console.log(e)
+        console.log(e.target.classList)
     })
 })
 
 
 //hover functionality for the new grids
+
+container.addEventListener('mouseover', function (e) {
+    if (e.target.classList.contains('new-grids')) {
+        e.target.style.background = "red";
+    }
+});
